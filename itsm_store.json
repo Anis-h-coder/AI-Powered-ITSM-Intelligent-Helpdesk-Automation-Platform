@@ -1,0 +1,157 @@
+{
+  "incidents": [
+    {
+      "id": "INC-2024-001",
+      "title": "VPN Connection drops from home",
+      "description": "GlobalProtect VPN tunnel drops constantly when connecting from my home network.",
+      "requester": "David Zhao",
+      "category": "Network & VPN",
+      "priority": "P2 - High",
+      "status": "Open"
+    },
+    {
+      "id": "INC-2024-002",
+      "title": "Cannot connect to corporate Wi-Fi",
+      "description": "My laptop cannot connect to the enterprise Wi-Fi network.",
+      "requester": "David Zhao",
+      "category": "Network & Connectivity",
+      "priority": "P3 - Medium",
+      "status": "Open"
+    },
+    {
+      "id": "INC-2024-003",
+      "title": "Outlook Synchronization Issues",
+      "description": "Outlook displays error 0x80040115 and is not syncing shared mailboxes.",
+      "requester": "Brian Hughes",
+      "category": "Email & O365",
+      "priority": "P3 - Medium",
+      "status": "Open"
+    },
+    {
+      "id": "INC-2024-004",
+      "title": "Password and Account Lockout",
+      "description": "My password expired and my account is locked out.",
+      "requester": "Rachel Simmons",
+      "category": "Identity & Access",
+      "priority": "P2 - High",
+      "status": "Open"
+    },
+    {
+      "id": "INC-2024-006",
+      "title": "Critical Infrastructure Outage",
+      "description": "The production database server is down and all services are failing.",
+      "requester": "Elena Rostova",
+      "category": "Cloud Infrastructure",
+      "priority": "P1 - Critical",
+      "status": "Escalated"
+    },
+    {
+      "id": "INC-TEST-3",
+      "title": "Automated Test Incident",
+      "description": "Test description",
+      "requester": "PyTest Runner",
+      "department": "QA",
+      "category": "Network & VPN",
+      "priority": "P3 - Medium",
+      "status": "Resolved"
+    }
+  ],
+  "serviceRequests": [
+    {
+      "id": "REQ001",
+      "requestedSoftware": "Visual Studio Code",
+      "status": "Submitted",
+      "requester": "Kevin Patel",
+      "department": "Engineering"
+    }
+  ],
+  "auditLogs": [],
+  "knowledgeArticles": [
+    {
+      "id": "KB-1001",
+      "title": "VPN Connection Troubleshooting",
+      "category": "Network & VPN",
+      "shortDescription": "Fixes for VPN connection drops from home.",
+      "troubleshootingInstructions": [
+        "Reset adapter",
+        "Push MTU 1360"
+      ],
+      "tags": [
+        "vpn",
+        "connection"
+      ],
+      "sourceDocument": "SOP-NET-014-VPN-Client-Resolution.md"
+    },
+    {
+      "id": "KB-1004",
+      "title": "Wi-Fi Connectivity Problems",
+      "category": "Network & Connectivity",
+      "shortDescription": "Troubleshooting enterprise Wi-Fi issues.",
+      "troubleshootingInstructions": [
+        "Forget network",
+        "Re-authenticate"
+      ],
+      "tags": [
+        "wifi",
+        "network"
+      ],
+      "sourceDocument": "SOP-NET-008-Enterprise-WiFi-Diagnostics.md"
+    },
+    {
+      "id": "KB-1003",
+      "title": "Outlook Synchronization Issues",
+      "category": "Email & O365",
+      "shortDescription": "Quick fixes for Outlook sync freezes.",
+      "troubleshootingInstructions": [
+        "Rebuild local cache"
+      ],
+      "tags": [
+        "outlook",
+        "email"
+      ],
+      "sourceDocument": "SOP-M365-021-Outlook-Sync-Remediation.md"
+    },
+    {
+      "id": "KB-1002",
+      "title": "Password Reset and Account Unlock",
+      "category": "Identity & Access",
+      "shortDescription": "Self-service password reset and account unlock.",
+      "troubleshootingInstructions": [
+        "Biometric re-verification"
+      ],
+      "tags": [
+        "password",
+        "account"
+      ],
+      "sourceDocument": "SOP-SEC-002-Password-Recovery-Standard.md"
+    },
+    {
+      "id": "KB-1005",
+      "title": "Software Installation Request",
+      "category": "Software & Licensing",
+      "shortDescription": "How to request software like VS Code.",
+      "troubleshootingInstructions": [
+        "Submit Service Request"
+      ],
+      "tags": [
+        "software",
+        "installation"
+      ],
+      "sourceDocument": "SOP-APP-001.md"
+    },
+    {
+      "id": "KB-1006",
+      "title": "Infrastructure Outage Protocol",
+      "category": "Cloud Infrastructure",
+      "shortDescription": "Steps for critical infrastructure outage.",
+      "troubleshootingInstructions": [
+        "Page SRE immediately"
+      ],
+      "tags": [
+        "outage",
+        "critical"
+      ],
+      "sourceDocument": "SOP-SRE-009.md"
+    }
+  ]
+}

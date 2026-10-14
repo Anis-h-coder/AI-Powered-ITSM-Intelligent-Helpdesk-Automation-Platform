@@ -1,0 +1,8 @@
+{
+  "name": "AI-Powered ITSM \u0026 Intelligent Helpdesk Automation Platform",
+  "description": "A professional enterprise-grade frontend dashboard for IT helpdesk management, featuring modular navigation, responsive layouts, and clean data visualization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
