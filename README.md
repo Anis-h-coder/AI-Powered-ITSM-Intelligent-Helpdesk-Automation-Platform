@@ -35,8 +35,6 @@ pract/
 └── README.md      # Project documentation
 ```
 
-*Update this structure to match the final repository before submission.*
-
 ## Setup and Installation
 
 ### Prerequisites
