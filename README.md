@@ -84,7 +84,7 @@ pract/
 ├── package.json   # Node.js project configuration
 └── README.md      # Project documentation
 
-Note: Update the project structure if your actual repository folders differ.
+«Note: Update the project structure if your actual repository folders differ.»
 
 Installation & Setup
 
@@ -143,7 +143,7 @@ npm run dev
 
 Open the local URL displayed in the terminal.
 
-Note: Confirm your actual backend entry point, frontend directory, and available npm scripts before running these commands.
+«Note: Confirm your actual backend entry point, frontend directory, and available npm scripts before running these commands.»
 
 AI Analysis & Incident Classification
 
@@ -160,7 +160,7 @@ AI Capabilities
 
 These capabilities help reduce manual incident categorization and support faster IT incident triage.
 
-AI-generated classifications and recommendations should be reviewed by IT support personnel before consequential remediation actions are performed.
+«AI-generated classifications and recommendations should be reviewed by IT support personnel before consequential remediation actions are performed.»
 
 Knowledge Retrieval & RAG
 
@@ -197,17 +197,17 @@ Testing
 
 The following functionality should be verified before deployment or project submission:
 
-- Frontend application starts successfully.
-- Backend API starts without errors.
-- Database connectivity works when configured.
-- Incident creation and retrieval function correctly.
-- Hugging Face Zero-Shot Classification returns appropriate incident classifications.
-- AI analysis provides relevant recommendations.
-- Knowledge Base search retrieves relevant articles.
-- RAG-based retrieval provides contextual troubleshooting information.
-- Automated remediation workflows handle failures appropriately.
-- Software request workflows function correctly.
-- Error handling and escalation workflows work as expected.
+- [ ] Frontend application starts successfully.
+- [ ] Backend API starts without errors.
+- [ ] Database connectivity works when configured.
+- [ ] Incident creation and retrieval function correctly.
+- [ ] Hugging Face Zero-Shot Classification returns appropriate incident classifications.
+- [ ] AI analysis provides relevant recommendations.
+- [ ] Knowledge Base search retrieves relevant articles.
+- [ ] RAG-based retrieval provides contextual troubleshooting information.
+- [ ] Automated remediation workflows handle failures appropriately.
+- [ ] Software request workflows function correctly.
+- [ ] Error handling and escalation workflows work as expected.
 
 Future Enhancements
 
@@ -220,3 +220,6 @@ Future Enhancements
 - Implement role-based access control and audit logging.
 - Improve AI-assisted incident prioritization.
 
+Author
+
+Developed as an AI-powered IT Service Management and Intelligent Helpdesk Automation project.
