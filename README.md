@@ -1,4 +1,3 @@
-````markdown
 # AI-Powered ITSM & Intelligent Helpdesk Automation Platform
 
 ## Overview
@@ -81,7 +80,6 @@ pract/
 ├── data/          # Project data and supporting files
 ├── package.json   # Node.js project configuration
 └── README.md      # Project documentation
-````
 
 ### Installation & Setup
 
