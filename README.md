@@ -1,121 +1,222 @@
-# AI-Powered ITSM & Intelligent Helpdesk Automation Platform
+AI-Powered ITSM & Intelligent Helpdesk Automation Platform
 
-## Overview
+Overview
 
-The AI-Powered ITSM & Intelligent Helpdesk Automation Platform is a web-based solution designed to simplify IT support operations through AI-assisted incident analysis, automated troubleshooting and knowledge retrieval.
+The AI-Powered ITSM & Intelligent Helpdesk Automation Platform is a web-based application designed to streamline IT support operations through AI-assisted incident analysis, intelligent knowledge retrieval, automated troubleshooting, and service request management.
 
-The platform helps employees report IT issues and enables support teams to review incidents, identify possible root causes and access relevant troubleshooting recommendations.
+The platform enables employees to report IT issues through a self-service portal while helping IT support teams analyse incidents, identify potential root causes, prioritize issues, and access relevant troubleshooting recommendations.
 
-## Key Features
+Key Features
 
-- **Employee Self-Service Portal:** Submit IT support requests and track issues.
-- **ITSM Dashboard:** View and manage incidents and service requests.
-- **AI Analysis & Incident Triage:** Analyse incident descriptions and generate suggested classifications, priorities and troubleshooting guidance.
-- **Knowledge Base & RAG:** Search relevant IT knowledge articles and retrieve contextual information for common support problems.
-- **Auto-Resolution & Self-Healing:** Explore automated remediation workflows and resolution simulations.
-- **Software Provisioning:** Support software request and provisioning workflows.
+1. Employee Self-Service Portal
 
-## Technology Stack
+- Submit IT incidents and service requests.
+- Track submitted requests and their status.
+- Interact with the AI-powered support chatbot.
+- Receive assistance for common IT problems.
 
-- **Frontend:** React, JavaScript, HTML and CSS
-- **Backend:** Python, FastAPI
-- **Database:** MongoDB Atlas
-- **AI Integration:** AI-assisted incident analysis and knowledge retrieval
-- **Development Tools:** Visual Studio Code, Node.js and Python
+2. ITSM Dashboard
 
-## Project Structure
+- View and manage incidents and service requests.
+- Monitor incident status, priority, and classification.
+- Review incident information and support activities.
+- Provide IT teams with a centralized incident management interface.
 
-```text
+3. AI Analysis & Incident Triage
+
+- Analyse employee-reported incident descriptions.
+- Classify incidents using Hugging Face Zero-Shot Classification.
+- Suggest relevant incident categories without requiring a dedicated classifier trained on predefined categories.
+- Generate AI-assisted priority suggestions and troubleshooting guidance.
+- Identify potential causes and support incident triage.
+
+4. Knowledge Base & Retrieval-Augmented Generation (RAG)
+
+- Maintain IT troubleshooting articles and knowledge documents.
+- Search relevant knowledge articles based on incident descriptions.
+- Retrieve contextual information using document chunking and embeddings.
+- Provide knowledge-based troubleshooting recommendations.
+- Support IT teams with relevant information for incident resolution.
+
+5. Auto-Resolution & Self-Healing
+
+- Explore automated incident remediation workflows.
+- Simulate troubleshooting and resolution actions.
+- Provide retry options when automated resolution fails.
+- Support incident escalation to IT teams when necessary.
+
+6. Software Request & Provisioning
+
+- Allow employees to submit software installation requests.
+- Track software request status.
+- Demonstrate software provisioning through simulated workflows.
+
+Technology Stack
+
+Component| Technologies
+Frontend| React, JavaScript, HTML, CSS, Tailwind CSS
+Backend| Python, FastAPI
+Database| MongoDB Atlas
+AI & Machine Learning| Hugging Face Zero-Shot Classification
+AI Analysis| Incident classification, priority suggestions, troubleshooting recommendations
+Knowledge Retrieval| RAG, document chunking, embeddings, vector-based retrieval
+Development Tools| Visual Studio Code, Node.js, Python
+
+System Architecture
+
+The platform follows a frontend-backend architecture with AI-assisted incident analysis and knowledge retrieval.
+
+- Frontend: React-based interface for employees and IT support teams.
+- Backend: FastAPI provides REST API endpoints for application functionality.
+- Database: MongoDB Atlas stores application data when configured and connected.
+- AI Analysis Layer: Hugging Face Zero-Shot Classification supports incident categorization and triage.
+- Knowledge Retrieval Layer: RAG-based retrieval helps identify relevant IT documentation and troubleshooting information.
+- Automation Layer: Demonstrates incident remediation and service request workflows.
+- Integration Layer: Uses simulated integrations for selected ITSM workflows.
+
+Project Structure
+
 pract/
-├── backend/       # Backend application
+├── backend/       # FastAPI backend application
 ├── frontend/      # Frontend application
 ├── src/           # Application source files
 ├── data/          # Project data and supporting files
 ├── package.json   # Node.js project configuration
 └── README.md      # Project documentation
-```
 
-## Setup and Installation
+Note: Update the project structure if your actual repository folders differ.
 
-### Prerequisites
+Installation & Setup
 
-- Python 3.10 or a compatible version required by the project
+Prerequisites
+
+- Python 3.10 or a compatible version
 - Node.js and npm
-- MongoDB Atlas access, if required by the configured backend
+- MongoDB Atlas account and database configuration, if required
 
-### Backend Setup
+1. Clone the Repository
 
-Open a terminal in the backend directory.
+git clone <your-repository-url>
+cd pract
 
-```bash
+2. Backend Setup
+
+Navigate to the backend directory:
+
+cd backend
+
+Create a Python virtual environment:
+
 python -m venv .venv
-```
 
-Activate the virtual environment.
+Activate the environment.
 
-**Windows PowerShell:**
+Windows PowerShell:
 
-```powershell
 .\.venv\Scripts\Activate.ps1
-```
 
-Install the dependencies listed in the project's requirements file.
+Install the required dependencies:
 
-```bash
 pip install -r requirements.txt
-```
 
-Start the FastAPI server using the actual application module configured in the project. For example, if the entry point is `main.py`:
+Configure the required environment variables.
 
-```bash
+Start the FastAPI server. If the backend entry point is "main.py":
+
 uvicorn main:app --reload
-```
 
-### Frontend Setup
+The FastAPI documentation is available at:
 
-Open another terminal in the directory containing the frontend's `package.json`.
+http://127.0.0.1:8000/docs
 
-```bash
+3. Frontend Setup
+
+Open a new terminal and navigate to the directory containing the frontend "package.json".
+
+Install dependencies:
+
 npm install
+
+Start the development server:
+
 npm run dev
-```
 
-Use the local URL displayed by the development server.
+Open the local URL displayed in the terminal.
 
-*Confirm the actual dependency files, scripts, entry point and required environment variables before following these commands.*
+Note: Confirm your actual backend entry point, frontend directory, and available npm scripts before running these commands.
 
-## AI Analysis and Knowledge Retrieval
+AI Analysis & Incident Classification
 
-The platform provides AI-assisted incident triage and troubleshooting recommendations. Its knowledge retrieval functionality is intended to surface relevant documentation for common IT support issues.
+The platform uses Hugging Face Zero-Shot Classification to analyse employee-reported IT incidents and suggest relevant incident categories.
 
-AI-generated classifications and recommendations should be reviewed by the support team before any consequential remediation is performed.
+Zero-shot classification enables the model to classify incident descriptions into candidate categories without requiring a dedicated classifier trained specifically on those categories.
 
-## Configuration and Security
+AI Capabilities
 
-- Store API keys, database credentials and other secrets in environment variables.
-- Do not commit `.env` files or credentials to a public repository.
-- Provide a safe `.env.example` containing placeholder values where configuration documentation is needed.
-- Do not include real employee information or sensitive production data in sample datasets.
+- Zero-Shot Incident Classification: Classifies incident descriptions into relevant IT incident categories.
+- Priority Assessment: Supports AI-assisted incident priority suggestions.
+- Incident Analysis: Analyses reported issues and identifies potential causes.
+- Troubleshooting Recommendations: Provides suggested troubleshooting steps to assist IT support teams.
 
-## Testing
+These capabilities help reduce manual incident categorization and support faster IT incident triage.
 
-Before submission, verify that:
+AI-generated classifications and recommendations should be reviewed by IT support personnel before consequential remediation actions are performed.
 
-- The frontend starts successfully.
-- The backend starts without errors.
+Knowledge Retrieval & RAG
+
+The Knowledge Base module supports troubleshooting through relevant IT documentation.
+
+The retrieval workflow is designed to:
+
+1. Process knowledge documents.
+2. Split documents into smaller chunks.
+3. Generate embeddings for knowledge retrieval.
+4. Retrieve relevant information based on incident descriptions.
+5. Provide contextual troubleshooting recommendations.
+
+This approach helps IT support teams access relevant knowledge articles while investigating incidents.
+
+ServiceNow Integration
+
+The platform demonstrates ITSM workflows using a simulated ServiceNow adapter.
+
+The current implementation focuses on demonstrating incident management, automated troubleshooting, and service request workflows.
+
+A live ServiceNow integration can be introduced in a future version using the official ServiceNow APIs and appropriate authentication.
+
+Configuration & Security
+
+- Store API keys and database credentials in environment variables.
+- Never commit sensitive credentials or ".env" files to GitHub.
+- Use a ".env.example" file to document required configuration variables.
+- Avoid using sensitive employee information or production data in test environments.
+- Validate and handle API errors appropriately.
+- Review AI-generated recommendations before executing remediation workflows.
+
+Testing
+
+The following functionality should be verified before deployment or project submission:
+
+- Frontend application starts successfully.
+- Backend API starts without errors.
 - Database connectivity works when configured.
-- Incident creation and retrieval work as expected.
-- AI analysis returns appropriate results when the required AI service is configured.
-- Knowledge base search works.
-- Errors are handled gracefully when a service is unavailable.
+- Incident creation and retrieval function correctly.
+- Hugging Face Zero-Shot Classification returns appropriate incident classifications.
+- AI analysis provides relevant recommendations.
+- Knowledge Base search retrieves relevant articles.
+- RAG-based retrieval provides contextual troubleshooting information.
+- Automated remediation workflows handle failures appropriately.
+- Software request workflows function correctly.
+- Error handling and escalation workflows work as expected.
 
-## Future Enhancements
+Future Enhancements
 
+- Integrate with live ServiceNow APIs.
 - Improve incident correlation and anomaly detection.
-- Expand the knowledge base and retrieval evaluation.
-- Integrate with external ITSM platforms such as ServiceNow.
-- Add monitoring, auditability and additional automated remediation workflows.
+- Expand knowledge base coverage and retrieval accuracy.
+- Improve AI classification accuracy and evaluation.
+- Introduce advanced incident analytics and monitoring.
+- Enhance automated remediation workflows.
+- Implement role-based access control and audit logging.
+- Improve AI-assisted incident prioritization.
 
-## Author
-
-Developed as an AI-powered IT Service Management and intelligent helpdesk automation project.
